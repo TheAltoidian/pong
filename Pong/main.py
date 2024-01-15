@@ -28,6 +28,6 @@ while game_state:
     sleep(0.1)
     screen.update()
     ball.move()
-    print(f"{ball.y_direction}-{ball.x_direction} at {ball.xcor()},{ball.ycor()}")
+    # print(f"{ball.y_direction}-{ball.x_direction} at {ball.xcor()},{ball.ycor()}")
 
 screen.exitonclick()

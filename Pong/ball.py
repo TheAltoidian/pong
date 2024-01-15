@@ -10,12 +10,13 @@ class Ball(Turtle):
         self.speed("slowest")
         self.y_direction = "up"
         self.x_direction = "right"
+        self.variable_speed = 10
 
     def up_right(self):
         if self.ycor() < 300:
             if self.xcor() < 540:
-                new_x = self.xcor() + 10
-                new_y = self.ycor() + 10
+                new_x = self.xcor() + self.variable_speed
+                new_y = self.ycor() + self.variable_speed
                 self.teleport(new_x, new_y)
             else:
                 self.x_direction = "left"
@@ -25,8 +26,8 @@ class Ball(Turtle):
     def down_right(self):
         if self.ycor() > -290:
             if self.xcor() < 540:
-                new_x = self.xcor() + 10
-                new_y = self.ycor() - 10
+                new_x = self.xcor() + self.variable_speed
+                new_y = self.ycor() - self.variable_speed
                 self.teleport(new_x, new_y)
             else:
                 self.x_direction = "left"
@@ -36,8 +37,8 @@ class Ball(Turtle):
     def up_left(self):
         if self.ycor() < 300:
             if self.xcor() > -540:
-                new_x = self.xcor() - 10
-                new_y = self.ycor() + 10
+                new_x = self.xcor() - self.variable_speed
+                new_y = self.ycor() + self.variable_speed
                 self.teleport(new_x, new_y)
             else:
                 self.x_direction = "right"
@@ -47,8 +48,8 @@ class Ball(Turtle):
     def down_left(self):
         if self.ycor() > -300:
             if self.xcor() > -540:
-                new_x = self.xcor() - 10
-                new_y = self.ycor() - 10
+                new_x = self.xcor() - self.variable_speed
+                new_y = self.ycor() - self.variable_speed
                 self.teleport(new_x, new_y)
             else:
                 self.x_direction = "right"
